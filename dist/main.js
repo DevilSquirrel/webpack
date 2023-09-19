@@ -1,0 +1,1 @@
+document.body.append(function(){const e=document.createElement("div");return e.innerHTML="Hello webpack",e}());

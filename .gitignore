@@ -1,6 +1,5 @@
 node_modules
 mock.png
-dist
 .*.sw*
 .build*
 jquery.fn.*
