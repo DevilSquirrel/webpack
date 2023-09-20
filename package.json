@@ -8,8 +8,8 @@
     "watch": "webpack --watch",
     "start": "webpack serve --open",
     "server": "node server.js",
-    "build": "webpack"
-  },
+  "build": "webpack --config webpack.config4.js"
+},
   "author": "",
   "license": "ISC",
   "devDependencies": {
