@@ -4,20 +4,22 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports= {
   mode:'development',
   entry:{
-    index:{
-      import: './src/demo3/index.js',
-      dependOn: 'shared'
-    },
-    another: {
-      import: './src/demo3/another-module.js',
-      dependOn: 'shared',
-    },
-    shared: 'lodash'
+    index: './src/demo3/index.js',
+    another: './src/demo3/another-module.js'
+    // index:{
+    //   import: './src/demo3/index.js',
+    //   dependOn: 'shared'
+    // },
+    // another: {
+    //   import: './src/demo3/another-module.js',
+    //   dependOn: 'shared',
+    // },
+    // shared: 'lodash'
   },
-  devtool:'inline-source-map',
-  devServer:{
-    static:'./dist'
-  },
+  // devtool:'inline-source-map',
+  // devServer:{
+  //   static:'./dist'
+  // },
   plugins:[
     new HtmlWebpackPlugin({
       title:'Development'
@@ -27,9 +29,9 @@ module.exports= {
     filename:'[name].bundle.js',
     path:path.resolve(__dirname,'dist'),
     clean:true,
-    publicPath:'/',
+    // publicPath:'/',
   },
-  module:{
+  /* module:{
     rules:[
       {
         test:/\.css$/i,
@@ -44,8 +46,11 @@ module.exports= {
         type: 'asset/resource',
       }
     ]
-  },
+  }, */
   optimization:{
-    runtimeChunk:'single'
+    runtimeChunk:'single',
+    /* splitChunks:{
+      chunks: 'all',
+    } */
   }
 }

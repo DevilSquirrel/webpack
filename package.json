@@ -8,7 +8,7 @@
     "watch": "webpack --watch",
     "start": "webpack serve --open",
     "server": "node server.js",
-  "build": "webpack --config webpack.config4.js"
+  "build": "webpack --config webpack.config6.js"
 },
   "author": "",
   "license": "ISC",
